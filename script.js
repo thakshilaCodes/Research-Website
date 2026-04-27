@@ -1,7 +1,6 @@
 const nav = document.getElementById("navmenu");
 const navToggle = document.getElementById("nav-toggle");
 const navCollapse = document.getElementById("navbarSupportedContent");
-const mainEl = document.getElementById("main-content");
 const navItems = document.querySelectorAll(".navbar-nav .nav-item");
 const contactForm = document.querySelector(".contact-form");
 const contactFeedback = document.getElementById("contact-feedback");
@@ -27,31 +26,6 @@ function updateActiveNavItem() {
   activeItem?.classList.add("active");
 }
 
-function initSectionReveal() {
-  if (!mainEl || prefersReducedMotion) return;
-
-  mainEl.classList.add("reveal-on-scroll");
-  const sections = mainEl.querySelectorAll(":scope > section");
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
-      });
-    },
-    { root: null, rootMargin: "0px 0px -5% 0px", threshold: 0.06 },
-  );
-
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.9) {
-      section.classList.add("is-visible");
-    }
-    io.observe(section);
-  });
-}
-
 navToggle.addEventListener("click", () => {
   const isOpen = navCollapse.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
@@ -71,11 +45,6 @@ if (contactForm) {
       contactFeedback.hidden = false;
       contactFeedback.textContent =
         "Thanks — we received your message. The team will get back to you when possible.";
-    } else {
-      contactForm.insertAdjacentText(
-        "afterbegin",
-        "Thanks — we received your message. The team will get back to you when possible.",
-      );
     }
     contactForm.reset();
   });
@@ -86,6 +55,5 @@ window.addEventListener("scroll", () => {
   updateActiveNavItem();
 });
 
-initSectionReveal();
 updateNavBackground();
 updateActiveNavItem();

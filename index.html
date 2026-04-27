@@ -3,28 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AgileSense AI research project website for an emotion-aware Agile system."
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="AgileSense AI research project website for an emotion-aware Agile system." />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <title>AgileSense AI</title>
   </head>
   <body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <nav id="navmenu" class="navbar sticky-top" aria-label="Site">
       <a class="navbar-brand" href="#home">
-        <span class="brand-icon">AS</span>
-        <span>AgileSense AI</span>
+        <span class="brand-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>AgileSense <em>AI</em></span>
       </a>
       <button id="nav-toggle" class="navbar-toggler" type="button" aria-expanded="false">
-        <span id="nav-toggle-icon">⋮</span>
+        <span class="hamburger"><span></span><span></span><span></span></span>
       </button>
-
       <div id="navbarSupportedContent" class="navbar-collapse">
         <ul id="navmenu-links" class="navbar-nav">
           <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
@@ -33,7 +30,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#project-scope">Literature Survey</a>
               <a class="dropdown-item" href="#research_gap">Research Gap</a>
-              <a class="dropdown-item" href="#research_problem">Research Problem &amp; Solution</a>
+              <a class="dropdown-item" href="#research_problem">Research Problem & Solution</a>
               <a class="dropdown-item" href="#research_objectives">Research Objectives</a>
               <a class="dropdown-item" href="#methodology">Methodology</a>
               <a class="dropdown-item" href="#tech_used">Technologies</a>
@@ -54,865 +51,743 @@
       </div>
     </nav>
 
+    <!-- HERO -->
     <section id="home">
-      <div class="container">
-        <div class="hero-cta">
-          <h1>Emotion-Aware Agile<br />System for Teams</h1>
+      <div class="hero-particles" id="heroParticles"></div>
+      <div class="hero-grid-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-tag">Research Project · 525 · 2025</div>
+          <h1 class="hero-title">
+            <span class="hero-line">Emotion-Aware</span>
+            <span class="hero-line accent">Agile Intelligence</span>
+            <span class="hero-line">for Software Teams</span>
+          </h1>
           <p class="hero-lead">
-            Research that connects how teams feel with how they deliver: emotions, expertise, sprint
-            risk, and inclusive collaboration in one place.
+            AgileSense AI helps teams detect emotional risk early, recommend the right experts, and make better sprint decisions with data-driven insights.
           </p>
-          <a class="btn btn-outline-light" href="#project-scope">
-            <span class="btn-text">Learn More</span><span class="btn-icon">›</span>
-          </a>
+          <div class="hero-highlights">
+            <span class="hero-chip">Emotion Monitoring</span>
+            <span class="hero-chip">Expert Matching</span>
+            <span class="hero-chip">Sprint Risk Alerts</span>
+            <span class="hero-chip">Inclusive Collaboration</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#project-scope">Explore Research <span class="arrow">→</span></a>
+            <a class="btn-ghost" href="#about">Meet the Team</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><span class="stat-num">4</span><span class="stat-label">Research Modules</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">6</span><span class="stat-label">Team Members</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">AI</span><span class="stat-label">Powered Platform</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orb orb-1"></div>
+          <div class="hero-orb orb-2"></div>
+          <div class="hero-orb orb-3"></div>
+          <img
+            class="hero-illustration"
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=80"
+            alt="Software engineering team collaborating around analytics screens in an agile environment"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="hero-visual-caption">Human-centered AI for healthier, faster sprint delivery.</div>
         </div>
       </div>
-      <div class="hero-cover">
-        <div class="spotlight-image"></div>
-        <div class="hero-image"></div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
       </div>
     </section>
 
     <main id="main-content">
+
+    <!-- PROJECT SCOPE -->
     <section id="project-scope" class="main-sections">
       <div class="container">
-        <h5 class="section-headings">Project Scope</h5>
+        <div class="section-label">Project Scope</div>
+        <h2 class="section-title">Literature Survey</h2>
+        <div class="section-divider"></div>
 
         <div id="literature" class="sub-section">
-          <h2>Literature Survey</h2>
-          <div class="row">
-            <div id="project-scope-left" class="col-md-6 pt-lg-5">
-              <div class="section-left">
-                <div class="section-info-div">
-                  <div class="row compact-row">
-                    <div class="col-sm-5">
-                      <div class="lit-icon">AI</div>
-                    </div>
-                    <div class="col-sm-7 text-col">
-                      Agile communication carries emotional and collaboration signals that are
-                      often invisible in traditional project management tools.
-                    </div>
-                  </div>
-                </div>
-                <div class="section-figure">
-                  <div class="figure-line-chart" role="img" aria-label="Line chart of emotional signal intensity by sprint week">
-                    <svg class="line-chart" viewBox="0 0 420 200" preserveAspectRatio="xMidYMid meet">
-                      <rect x="0" y="0" width="420" height="200" fill="white" />
-                      <g stroke="#dfe6e9" stroke-width="1">
-                        <line x1="32" y1="24" x2="32" y2="170" />
-                        <line x1="32" y1="170" x2="390" y2="170" />
-                        <line x1="32" y1="50" x2="390" y2="50" />
-                        <line x1="32" y1="90" x2="390" y2="90" />
-                        <line x1="32" y1="130" x2="390" y2="130" />
-                      </g>
-                      <polyline
-                        fill="none"
-                        stroke="#1abc9c"
-                        stroke-width="3"
-                        points="32,150 100,120 180,100 255,60 320,40 390,30"
-                      />
-                      <g fill="#1abc9c">
-                        <circle cx="32" cy="150" r="4" />
-                        <circle cx="100" cy="120" r="4" />
-                        <circle cx="180" cy="100" r="4" />
-                        <circle cx="255" cy="60" r="4" />
-                        <circle cx="320" cy="40" r="4" />
-                        <circle cx="390" cy="30" r="4" />
-                      </g>
-                      <g fill="#636e72" font-size="10" font-family="Roboto, sans-serif">
-                        <text x="18" y="30">High</text>
-                        <text x="18" y="175">0</text>
-                        <text x="70" y="190">S1</text>
-                        <text x="150" y="190">S2</text>
-                        <text x="230" y="190">S3</text>
-                        <text x="310" y="190">S4</text>
-                        <text x="360" y="190">S5</text>
-                      </g>
-                    </svg>
-                    <p class="chart-subtitle">Signal focus: frustration + blockers (proxy)</p>
-                  </div>
-                  <p>Figure 1. Example trend of emotional risk signals over sprint weeks (illustrative)</p>
-                </div>
+          <div class="lit-grid">
+            <div class="lit-highlight-box" data-reveal>
+              <div class="lit-icon-ring">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 18L9 13L12 16L20 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 8H20V12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 6V18H18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
+              <h3 class="lit-usecase-title">Why This Matters in Real Sprints</h3>
+              <p class="lit-usecase-lead">Agile communication carries emotional and collaboration signals that are usually invisible in traditional project tools.</p>
+              <ul class="lit-usecase-list">
+                <li><strong>Early warning:</strong> Detect rising stress and frustration before deadlines slip.</li>
+                <li><strong>Better assignment:</strong> Match tasks with the right expertise at the right sprint phase.</li>
+                <li><strong>Inclusive decisions:</strong> Surface quiet team members' ideas during planning and retrospectives.</li>
+              </ul>
+              <p class="lit-usecase-tip">Tip: Hover each point to see where AgileSense AI creates practical intervention value.</p>
+              <img
+                class="lit-usecase-visual"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80"
+                alt="Agile software team collaborating with data dashboards"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div id="project-scope-right" class="col-md-6 pt-lg-5 justify-text">
-              <p>
-                Agile software development teams communicate through platforms such as Slack,
-                GitHub, Jira, and video meetings. These interactions reveal more than technical
-                progress: they also contain signals of frustration, burnout, demotivation,
-                hesitation, expertise, and conflict.
+            <div class="lit-chart-box" data-reveal>
+              <div class="chart-header"><span class="chart-tag">Trend Analysis</span></div>
+              <img
+                class="line-chart"
+                src="assets/figure1-stress-level-hq.png"
+                alt="Stress-performance curve illustrating optimal arousal and breakdown zones"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="chart-cap">
+                Figure 1. Stress-performance relationship (Yerkes-Dodson pattern): performance improves from low to moderate stress, then declines sharply under overload.
+                Source:
+                Team-selected visual adapted for literature discussion.
               </p>
-              <p>
-                Existing Agile systems focus mainly on tasks, velocity, and delivery status. They
-                rarely connect team emotions with sprint performance, workload balance, expertise
-                discovery, or inclusive participation. AgileSense AI combines NLP, affective
-                computing, semantic embeddings, computer vision, and decision support to address
-                this gap.
+              <img
+                class="line-chart line-chart-secondary"
+                src="assets/figure2-burndown-chart.png"
+                alt="Agile burndown chart showing ideal vs actual remaining work over sprint timeline"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="chart-cap">
+                Figure 2. Agile burndown chart: compares ideal and actual remaining work to evaluate sprint execution efficiency and predict delivery risk early.
+                Source:
+                <a href="https://commons.wikimedia.org/wiki/File:Burn_down_chart.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.
               </p>
-              <div class="references">
-                <p class="pt-sm-1"><strong>References</strong></p>
-                <ol>
-                  <li>Topic Assessment Form, IT4010 Research Project - 2025 July, Project ID 25-26J-525.</li>
-                  <li>Emotion-aware computing and NLP research for workplace communication analysis.</li>
-                  <li>Agile analytics research on sprint velocity, workload, backlog changes, and team behavior.</li>
+            </div>
+          </div>
+
+          <div class="lit-body" data-reveal>
+            <p>Agile software development teams communicate through platforms such as Slack, GitHub, Jira, and video meetings. These interactions reveal more than technical progress: they also contain signals of frustration, burnout, demotivation, hesitation, expertise, and conflict.</p>
+            <p>Existing Agile systems focus mainly on tasks, velocity, and delivery status. They rarely connect team emotions with sprint performance, workload balance, expertise discovery, or inclusive participation. AgileSense AI combines NLP, affective computing, semantic embeddings, computer vision, and decision support to address this gap.</p>
+            <p>Figure 1 reflects the Yerkes-Dodson stress-performance relationship: teams under very low pressure often show weak momentum, moderate pressure can improve focus and throughput, and sustained high stress leads to cognitive overload, errors, and communication breakdown. In Agile environments, this supports continuous monitoring of emotional strain so intervention can happen before teams move into burnout zones.</p>
+            <p>Figure 2 illustrates the Agile burndown concept used to evaluate sprint execution efficiency by comparing ideal and actual remaining work over time. When the actual line stays above the ideal trend, it often indicates blockers, underestimation, or coordination delays; when the gap narrows, teams recover through improved prioritization and collaboration. This figure supports our literature argument that delivery analytics should be interpreted together with emotional and communication signals for more reliable sprint-level decision making.</p>
+            <p>Recent studies in software engineering analytics highlight that communication quality is strongly linked to sprint predictability and team morale. Teams with unresolved negative sentiment often show delayed issue resolution, reduced pull-request throughput, and higher sprint spillover. However, most project dashboards still treat collaboration as a secondary signal rather than a measurable risk factor.</p>
+            <p>Literature on affective computing demonstrates that text-only sentiment can miss important context such as sarcasm, hesitation, and non-verbal stress indicators. Multi-modal approaches that combine linguistic cues, meeting behavior, and participation patterns provide more robust emotional insight. This supports the need for an integrated framework that fuses multiple evidence streams instead of relying on a single model output.</p>
+            <p>Research on intelligent task allocation also indicates that expertise matching should go beyond static role labels. Developer capability changes over time based on recent commits, domain exposure, and collaboration history. By modeling dynamic expertise and linking it with sprint risk and emotional climate, AgileSense AI positions itself as a practical decision-support layer for real Agile teams rather than a standalone analytics tool.</p>
+          </div>
+        </div>
+
+        <!-- Research Gap -->
+        <div id="research_gap" class="sub-section">
+          <div class="section-label">Research Gaps</div>
+          <h2 class="section-title">Where Current Tools Fall Short</h2>
+          <div class="section-divider"></div>
+          <div class="gap-grid">
+            <div class="gap-card" data-reveal style="--delay:0s">
+              <div class="gap-num">01</div>
+              <div class="gap-icon">💡</div>
+              <h4>Emotion Awareness</h4>
+              <p>Traditional Agile tools capture issue state transitions, but they do not detect frustration, burnout, hesitation, or emotional overload before these signals harm delivery quality.</p>
+              <p class="gap-example"><strong>Example:</strong> A sprint board may still show "In Progress" while team messages already indicate escalating stress and conflict.</p>
+            </div>
+            <div class="gap-card" data-reveal style="--delay:0.1s">
+              <div class="gap-num">02</div>
+              <div class="gap-icon">🎯</div>
+              <h4>Expertise Discovery</h4>
+              <p>Task assignment often relies on manual lookup, prior familiarity, or keyword tags instead of semantic expertise profiles and confidence-ranked recommendations.</p>
+              <p class="gap-example"><strong>Example:</strong> A high-priority API bug might be assigned to an available member rather than the developer with strongest recent domain knowledge.</p>
+            </div>
+            <div class="gap-card" data-reveal style="--delay:0.2s">
+              <div class="gap-num">03</div>
+              <div class="gap-icon">🤝</div>
+              <h4>Inclusive Communication</h4>
+              <p>Most brainstorming and retrospective workflows do not actively support hesitant contributors through private rephrasing, tone adaptation, and participation balance analytics.</p>
+              <p class="gap-example"><strong>Example:</strong> Quiet contributors in stand-ups may repeatedly stay unheard, causing hidden blockers and weak decision diversity.</p>
+            </div>
+            <div class="gap-card" data-reveal style="--delay:0.3s">
+              <div class="gap-num">04</div>
+              <div class="gap-icon">⚡</div>
+              <h4>Sprint Impact Prediction</h4>
+              <p>Existing Agile tools track backlog updates, but they provide limited intelligence on how mid-sprint requirement changes affect effort, schedule, quality, and delivery confidence.</p>
+              <p class="gap-example"><strong>Example:</strong> A newly added high-complexity story may increase hidden dependency risk, but teams often notice the real impact only near sprint closure.</p>
+            </div>
+          </div>
+          <div class="gap-tools-showcase" data-reveal>
+            <div class="gts-head">
+              <h4>Examples from Existing Tools</h4>
+              <p>Current dashboards are useful for task tracking, but they rarely combine delivery metrics with emotional and collaboration intelligence.</p>
+            </div>
+            <div class="gts-grid">
+              <figure class="gts-card">
+                <img src="assets/example-trello-board.jpg" alt="Example Trello board screenshot for task management workflow" loading="lazy" decoding="async" />
+                <figcaption>Trello-style board view: excellent for workflow tracking, limited for emotion-aware insight.</figcaption>
+              </figure>
+              <figure class="gts-card">
+                <img src="assets/example-jira-dashboard.png" alt="Example Jira dashboard widget screenshot for project tracking" loading="lazy" decoding="async" />
+                <figcaption>Jira-style dashboard widgets: strong delivery visibility, limited context on team emotional state.</figcaption>
+              </figure>
+            </div>
+            <p class="gts-source">
+              Sources:
+              <a href="https://commons.wikimedia.org/wiki/File:Trello_Board_Screenshot_for_Wiki_Tasks_Connected_Heritage_2023.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Trello Screenshot</a>
+              ·
+              <a href="https://commons.wikimedia.org/wiki/File:OpenStreetMap_for_Jira_Dashboard_Widget_Screenshot.png" target="_blank" rel="noopener noreferrer">Wikimedia Jira Dashboard Screenshot</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Research Problem & Solution -->
+        <div id="research_problem" class="sub-section">
+          <div class="section-label">Problem & Solution</div>
+          <h2 class="section-title">The Challenge We're Solving</h2>
+          <div class="section-divider"></div>
+          <div class="problem-solution-grid">
+            <div class="problem-card" data-reveal>
+              <div class="ps-tag problem-tag">Problem</div>
+              <h4>How can Agile teams detect hidden emotional and delivery risks early, then respond before sprint outcomes degrade?</h4>
+              <p>Modern Agile teams generate large volumes of communication across chats, stand-ups, issue trackers, and code reviews. While delivery metrics are visible, emotional strain, collaboration imbalance, and uncertainty signals remain mostly untracked in real time.</p>
+              <p>As a result, teams often identify risk too late: blockers accumulate, requirement changes ripple without impact clarity, task assignment quality drops, and sprint confidence declines. Existing tools provide activity visibility, but not integrated intelligence on <em>why</em> performance is changing.</p>
+            </div>
+            <div class="solution-card" data-reveal>
+              <div class="ps-tag solution-tag">Solution</div>
+              <h4>AgileSense AI — Multi-Module Intelligence</h4>
+              <p>AgileSense AI introduces a unified decision-support layer that combines emotional analytics, expertise recommendation, requirement-change impact modeling, and inclusive collaboration intelligence in one platform.</p>
+              <p>Instead of only showing status, the system translates team interactions and sprint signals into actionable guidance: early warnings for emotional overload, confidence-ranked expert suggestions, impact-aware replanning prompts, and communication support for quieter contributors. This enables Scrum teams to act proactively rather than reactively.</p>
+            </div>
+          </div>
+          <div class="app-home-shot" data-reveal>
+            <div class="ahs-head">
+              <h4>Developed Application — Home Screen</h4>
+            </div>
+            <figure class="ahs-figure">
+              <img src="assets/current-app-home-screen.png" alt="Current home screen of the developed AgileSense AI web application" loading="lazy" decoding="async" />
+              <figcaption>Current implemented application home screen showing module entry points, collaboration tools, and sprint workflow navigation.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Research Objectives -->
+        <div id="research_objectives" class="sub-section">
+          <div class="section-label">Objectives</div>
+          <h2 class="section-title">Research Objectives</h2>
+          <div class="section-divider"></div>
+          <div class="objectives-flow">
+            <article class="objf-item left" data-reveal style="--delay:0s">
+              <div class="objf-pin">★</div>
+              <div class="objf-card">
+                <h3>Agile Emotion Monitoring</h3>
+                <p>Develop a multi-modal emotion monitoring pipeline that analyzes team chat messages, stand-up conversations, and meeting interactions to detect frustration, stress, confidence, and motivation signals. Aggregate these signals over time to generate sprint-level emotional trend insights that help Scrum Masters intervene early and reduce collaboration breakdowns.</p>
+              </div>
+            </article>
+            <article class="objf-item right" data-reveal style="--delay:0.1s">
+              <div class="objf-pin">★</div>
+              <div class="objf-card">
+                <h3>AI-Based Expertise Recommendation</h3>
+                <p>Design an expertise recommendation engine that maps sprint tasks to developers using Jira histories, Git contributions, and semantic similarity between task descriptions and prior work. Produce ranked, confidence-aware recommendations to improve assignment quality, reduce bottlenecks, and ensure a fair distribution of workload across team members.</p>
+              </div>
+            </article>
+            <article class="objf-item left" data-reveal style="--delay:0.2s">
+              <div class="objf-pin">★</div>
+              <div class="objf-card">
+                <h3>Requirement Change Impact & Sprint Replanning</h3>
+                <p>Build a change-impact analysis component that detects requirement and backlog updates during active sprints, then estimates impact on effort, delivery dates, quality, and team productivity. Generate practical replanning suggestions so teams can adapt quickly while minimizing schedule slippage and quality risk.</p>
+              </div>
+            </article>
+            <article class="objf-item right" data-reveal style="--delay:0.3s">
+              <div class="objf-pin">★</div>
+              <div class="objf-card">
+                <h3>Inclusive Brainstorming & Communication Empowerment</h3>
+                <p>Create inclusive collaboration support tools that encourage hesitant contributors through private idea capture, AI-assisted rephrasing, and tone adaptation before sharing with the group. Visualize participation balance and contribution patterns to help teams make more inclusive, transparent, and psychologically safe decisions.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div id="methodology" class="sub-section">
+          <div class="section-label">Methodology</div>
+          <h2 class="section-title">System Architecture</h2>
+          <div class="section-divider"></div>
+          <div class="arch-showcase" data-reveal>
+            <div class="arch-left-column">
+              <figure class="arch-diagram">
+                <img
+                  class="arch-diagram-img"
+                  src="assets/system-architecture-final.png"
+                  alt="Beautiful high-level architecture diagram of AgileSense AI with gateway, microservices, data stores, and stakeholder feedback loop"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Figure: High-level architecture of AgileSense AI showing frontend signals, API gateway orchestration, emotion/sprint-impact/expertise/brainstorm services, MongoDB, and stakeholder-facing decision support outputs.</figcaption>
+              </figure>
+              <div class="arch-flow-panel">
+                <h5>Operational Flow</h5>
+                <ol class="arch-flow-steps">
+                  <li><strong>Signal capture:</strong> User interactions from meetings, chat, backlog changes, and collaboration modules are captured via the frontend and routed through the API Gateway.</li>
+                  <li><strong>Context processing:</strong> The orchestration layer normalizes payloads, enriches records with sprint and user context, and publishes streaming events for downstream services.</li>
+                  <li><strong>Service inference:</strong> Emotion, Sprint Impact, Expertise, and Brainstorm services process domain-specific signals and return confidence-aware outputs.</li>
+                  <li><strong>Persistence and retrieval:</strong> Processed insights are stored in MongoDB and cache layers for fast dashboard rendering, trend analysis, and historical comparison.</li>
+                  <li><strong>Decision support:</strong> The system surfaces actionable prompts (alerts, recommendations, and impact warnings) inside the workflow where teams plan and execute sprints.</li>
                 </ol>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div id="research_gap" class="sub-section">
-          <h2>Research Gap</h2>
-          <p>Following areas are the research gaps found in most Agile intelligence tools.</p>
-          <div class="row mt-5 research-gap">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5>Emotion Awareness</h5>
-                  <p>
-                    Traditional Agile tools do not detect frustration, burnout, hesitation, or
-                    emotional overload before they affect team performance.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5>Expertise Discovery</h5>
-                  <p>
-                    Task assignment still relies on manual lookup or keyword matching instead of
-                    semantic expertise profiles and confidence-ranked recommendations.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5>Inclusive Communication</h5>
-                  <p>
-                    Most brainstorming platforms do not support hesitant contributors with private
-                    rephrasing, tone control, and participation balance analytics.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="research_problem" class="sub-section">
-          <h2>Research Problem &amp; Solution</h2>
-          <div class="row">
-            <div class="col-md-6 justify-text">
-              <h5 class="sub-topic">Proposed Problem</h5>
-              <h4>
-                How can Agile teams detect emotional and delivery risks early, then act before
-                productivity and morale decline?
-              </h4>
-              <p>
-                Emotional signals in team chats, meetings, and task updates often go unnoticed.
-                This can lead to inefficient sprint planning, delayed blockers, interpersonal
-                conflict, uneven workload, and reduced team engagement.
-              </p>
-            </div>
-            <div class="col-md-6 justify-text">
-              <h5 class="sub-topic">Proposed Solution</h5>
-              <p>
-                AgileSense AI is a multi-module AI assistant that analyzes communication and
-                project data, detects team emotions, recommends experts, predicts the impact of
-                requirement changes, supports inclusive brainstorming, and provides actionable
-                decision support to Scrum Masters and project teams.
-              </p>
-            </div>
-          </div>
-          <div class="demo-box">
-            <h5>Product Demonstration - Solution</h5>
-            <div class="demo-screen">
-              <div class="demo-header"></div>
-              <div class="demo-grid">
-                <span>Emotion Monitoring</span>
-                <span>Expert Recommendation</span>
-                <span>Sprint Replanning</span>
-                <span>Inclusive Ideas</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="research_objectives" class="sub-section objectives">
-          <h2 class="objectives-title">Research Objectives</h2>
-          <div class="objectives-ribbon" aria-label="Research objectives path">
-            <div class="objective objective--left" style="--i: 0">
-              <div class="objective-copy">
-                <h3>Agile Emotion Monitoring</h3>
-                <p>
-                  Monitor emotions from text, meetings, micro-expressions, and voice; aggregate
-                  confidence and track how mood evolves across sprints and ceremonies.
-                </p>
-              </div>
-              <div class="objective-pivot" aria-hidden="true">
-                <div class="objective-connector"></div>
-                <div class="objective-icon">★</div>
-                <div class="objective-connector"></div>
-              </div>
-              <div class="objective-spacer" aria-hidden="true"></div>
-            </div>
-
-            <div class="objective objective--right" style="--i: 1">
-              <div class="objective-spacer" aria-hidden="true"></div>
-              <div class="objective-pivot" aria-hidden="true">
-                <div class="objective-connector"></div>
-                <div class="objective-icon">★</div>
-                <div class="objective-connector"></div>
-              </div>
-              <div class="objective-copy">
-                <h3>AI-Based Expertise Recommendation</h3>
-                <p>
-                  Map tasks to developers using Jira and Git history, semantic task embeddings,
-                  and ranked recommendations with confidence to improve fair allocation.
-                </p>
-              </div>
-            </div>
-
-            <div class="objective objective--left" style="--i: 2">
-              <div class="objective-copy">
-                <h3>Requirement Change Impact and Sprint Replanning</h3>
-                <p>
-                  Detect backlog changes, score risk across effort, schedule, quality, and
-                  productivity, and recommend data-driven replanning actions before the sprint ends.
-                </p>
-              </div>
-              <div class="objective-pivot" aria-hidden="true">
-                <div class="objective-connector"></div>
-                <div class="objective-icon">★</div>
-                <div class="objective-connector"></div>
-              </div>
-              <div class="objective-spacer" aria-hidden="true"></div>
-            </div>
-
-            <div class="objective objective--right" style="--i: 3">
-              <div class="objective-spacer" aria-hidden="true"></div>
-              <div class="objective-pivot" aria-hidden="true">
-                <div class="objective-connector"></div>
-                <div class="objective-icon">★</div>
-                <div class="objective-connector"></div>
-              </div>
-              <div class="objective-copy">
-                <h3>Inclusive Brainstorming and Communication Empowerment</h3>
-                <p>
-                  Support hesitant input through silent capture, rephrasing, tone control, and
-                  clustering, while visualizing participation balance for more inclusive decision making.
-                </p>
-              </div>
-            </div>
-            <div class="objective-path" aria-hidden="true">
-              <svg class="objective-zig" viewBox="0 0 4 1000" preserveAspectRatio="none">
-                <path
-                  d="M2,0
-                     L2,190
-                     C2,255 2,255 2,255
-                     C2,300 2,300 2,320
-                     L2,500
-                     C2,565 2,565 2,565
-                     C2,610 2,610 2,630
-                     L2,820
-                     C2,885 2,885 2,885
-                     C2,930 2,930 2,950
-                     L2,1000"
-                  fill="none"
-                  stroke="#26a69a"
-                  stroke-width="0.5"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div id="methodology" class="sub-section methodology">
-          <h2>Methodology</h2>
-          <p>Figure 2. High Level Architecture of the system.</p>
-          <div class="row methodology-row">
-            <div class="col-md-6">
-              <div class="arch-diagram" role="img" aria-label="AgileSense high level system diagram">
-                <div class="arch-layer arch-layer--ui">
-                  <div class="arch-phone" aria-hidden="true">
-                    <div class="arch-phone-top"></div>
-                    <div class="arch-phone-screen">
-                      <div class="arch-chip">Stand-up</div>
-                      <div class="arch-chip">Chat</div>
-                    </div>
-                  </div>
-                  <p class="arch-caption">Web / WebRTC meeting client</p>
-                </div>
-
-                <div class="arch-connector" aria-hidden="true">
-                  <div class="arch-arrow is-down"></div>
-                  <span>Events</span>
-                  <div class="arch-arrow is-down"></div>
-                </div>
-
-                <div class="arch-layer arch-layer--ingest">
-                  <div class="arch-box is-wide">
-                    <h6>Ingest + Orchestration</h6>
-                    <p class="arch-muted">Socket.io / API gateway, queues, schedulers, storage paths</p>
-                    <div class="arch-pills">
-                      <span>Capture</span>
-                      <span>Normalize</span>
-                      <span>Route</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="arch-connector" aria-hidden="true">
-                  <div class="arch-lane">
-                    <div class="arch-arrow is-right"></div>
-                    <span>Features</span>
-                    <div class="arch-arrow is-right"></div>
-                  </div>
-                </div>
-
-                <div class="arch-pipeline">
-                  <div class="arch-box">
-                    <h6>Emotion Service</h6>
-                    <p class="arch-muted">NLP + vision + micro-expression fusion</p>
-                    <ul class="arch-mini">
-                      <li>Text signals</li>
-                      <li>Frame signals</li>
-                    </ul>
-                  </div>
-                  <div class="arch-box">
-                    <h6>Expertise Service</h6>
-                    <p class="arch-muted">embeddings + ranking + feedback loop</p>
-                    <ul class="arch-mini">
-                      <li>Jira + Git</li>
-                      <li>Top-N experts</li>
-                    </ul>
-                  </div>
-                  <div class="arch-box">
-                    <h6>Sprint Impact Service</h6>
-                    <p class="arch-muted">change detection + impact model</p>
-                    <ul class="arch-mini">
-                      <li>Velocity risk</li>
-                      <li>Replan</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="arch-connector" aria-hidden="true">
-                  <div class="arch-arrow is-down"></div>
-                  <span>Store + notify</span>
-                  <div class="arch-arrow is-down"></div>
-                </div>
-
-                <div class="arch-dbs">
-                  <div class="arch-db">
-                    <div class="arch-db-icon mongo"></div>
-                    <p>Operational DB</p>
-                  </div>
-                  <div class="arch-db">
-                    <div class="arch-db-icon cache"></div>
-                    <p>Cache / features</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <ol class="methodology-bullets">
+            <div class="arch-bullets">
+              <h4>System Components</h4>
+              <ul>
                 <li><strong>Emotion monitoring</strong> for chat, stand-ups, and meetings</li>
                 <li><strong>Expertise mapping</strong> for faster, fairer task assignment</li>
                 <li><strong>Backlog change impact</strong> for proactive sprint management</li>
                 <li><strong>Inclusive collaboration</strong> to capture quiet contributors</li>
                 <li><strong>Dashboards and alerts</strong> for Scrum Masters and leads</li>
-              </ol>
-              <p class="justify-text">
-                Figure 2 illustrates a layered architecture. End users generate signals through the
-                collaboration client. The ingest layer standardizes and routes data to the correct
-                AI service. Outputs update operational storage, generate notifications, and feed the
-                decision-support experience on the main platform.
-              </p>
+              </ul>
+              <div class="arch-details">
+                <h5>Methodological Notes</h5>
+                <p>The architecture follows a modular microservice strategy so each research objective can evolve independently while sharing a common gateway and data contract. This improves maintainability, enables controlled model iteration, and supports phased evaluation of each module without destabilizing the full platform.</p>
+                <p>From an evaluation perspective, the methodology combines qualitative collaboration signals with quantitative delivery indicators. This allows AgileSense AI to explain not only <em>what</em> changed in sprint performance, but also <em>why</em> it changed, which is essential for practical intervention by Scrum Masters and team leads.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div id="tech_used" class="sub-section tech-used">
-          <h2>Technologies Used</h2>
-          <div class="row technology">
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Python logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="#3776ab" rx="6" />
-                  <path
-                    fill="#ffd343"
-                    d="M20 20c-6 0-8 2-8 6v4c0 3 1 4 3 4h2v-2c0-2 0-2 1-2h3c1 0 2 0 2 1v2h4v-5c0-3-1-4-2-4-2-1-2-1-5-1h-0z"
-                  />
-                </svg>
-              </div>
-              <p>Python</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="React logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <circle cx="32" cy="32" r="4" fill="#61dafb" />
-                  <g stroke="#61dafb" stroke-width="1.2" fill="none">
-                    <ellipse cx="32" cy="32" rx="20" ry="8" />
-                    <ellipse cx="32" cy="32" rx="20" ry="8" transform="rotate(60 32 32)" />
-                    <ellipse cx="32" cy="32" rx="20" ry="8" transform="rotate(120 32 32)" />
-                  </g>
-                </svg>
-              </div>
-              <p>React</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="TensorFlow logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <path
-                    d="M18 20h6v6h-3v2h-3v-8zm16 0h6l2 2v6h-2v-4h-2v4h-2l-2-2v-6z"
-                    fill="#ff6f00"
-                  />
-                </svg>
-              </div>
-              <p>Tensorflow</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Keras logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="#d00000" rx="8" />
-                  <text x="16" y="44" font-size="28" fill="white" font-family="Roboto, sans-serif" font-weight="800">
-                    K
-                  </text>
-                </svg>
-              </div>
-              <p>Keras</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="MongoDB logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <path
-                    d="M32 10c-6 6-6 18-2 32 2 6 3 7 2 10h2c-1-3 0-4 1-5 6-7 4-20-1-27-1-2-1-2-1-1-1-3-0-3-0-0l-0-0z"
-                    fill="#13aa52"
-                  />
-                </svg>
-              </div>
-              <p>MongoDB</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Firebase logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <path d="M12 50 L28 18 L34 32 L20 32 Z" fill="#ffa000" />
-                  <path d="M20 32 L40 20 L30 12 L20 12 Z" fill="#f57c00" />
-                  <path d="M20 32 L32 10 L50 20 Z" fill="#ffca28" />
-                </svg>
-              </div>
-              <p>Firebase</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Google Cloud logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <path
-                    d="M18 34c-2-6 1-12 6-15l3 3c-3 2-4 5-2 8l-7 4z"
-                    fill="#4285f4"
-                  />
-                  <path d="M28 20h8v-6H26c-5 0-8 2-9 4l5 3c1-1 3-1 6-1z" fill="#ea4335" />
-                  <path
-                    d="M36 20h10c2 0 3 0 3 0l-4 3c-1 0-1 0-2 0H36v-3z"
-                    fill="#fbbc04"
-                  />
-                  <path
-                    d="M46 20c2 0 2 0 1 0l-4-3-4-3c-2 0-2 0-1 0l4 3v-0z"
-                    fill="#34a853"
-                  />
-                </svg>
-              </div>
-              <p>Google Cloud</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Kafka logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <circle cx="20" cy="32" r="4" fill="#1e88e5" />
-                  <circle cx="44" cy="22" r="4" fill="#1e88e5" />
-                  <circle cx="44" cy="42" r="4" fill="#1e88e5" />
-                  <path d="M24 32h10M34 32l6-6M34 32l6 6" stroke="#1e88e5" stroke-width="2" fill="none" />
-                </svg>
-              </div>
-              <p>Kafka</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Docker logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <g fill="#1d63ed">
-                    <rect x="16" y="32" width="6" height="6" />
-                    <rect x="24" y="32" width="6" height="6" />
-                    <rect x="32" y="32" width="6" height="6" />
-                    <rect x="16" y="24" width="6" height="6" />
-                    <rect x="24" y="24" width="6" height="6" />
-                    <rect x="32" y="24" width="6" height="6" />
-                  </g>
-                </svg>
-              </div>
-              <p>Docker</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Google Colab logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <text x="10" y="40" font-size="22" fill="#f9ab00" font-family="Roboto, sans-serif" font-weight="800">
-                    Co
-                  </text>
-                </svg>
-              </div>
-              <p>Google Colab</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="Google Maps API logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <path
-                    d="M32 16c-6 0-10 4-10 9 0 6 6 10 10 18 4-7 10-12 10-18 0-5-4-9-10-9z"
-                    fill="#34a853"
-                  />
-                  <circle cx="32" cy="25" r="3" fill="white" />
-                </svg>
-              </div>
-              <p>Google map API</p>
-            </div>
-            <div class="tech-item">
-              <div class="tech-logo" aria-label="JWT logo">
-                <svg viewBox="0 0 64 64" width="64" height="64" role="img">
-                  <rect width="64" height="64" fill="white" rx="8" />
-                  <text x="12" y="40" font-size="22" fill="#1e88e5" font-family="Roboto, sans-serif" font-weight="800">
-                    JWT
-                  </text>
-                </svg>
-              </div>
-              <p>Jwt</p>
-            </div>
+        <!-- Technologies -->
+        <div id="tech_used" class="sub-section tech-section">
+          <div class="section-label">Technologies</div>
+          <h2 class="section-title">Technologies Used</h2>
+          <div class="section-divider"></div>
+          <div class="tech-grid">
+            <div class="tech-card" data-reveal style="--delay:0s"><div class="tc-logo python-brand"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python icon" loading="lazy" decoding="async" /></div><span>Python</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.05s"><div class="tc-logo react-brand"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React icon" loading="lazy" decoding="async" /></div><span>React</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.1s"><div class="tc-logo vite-brand"><img src="https://cdn.simpleicons.org/vite/646CFF" alt="Vite icon" loading="lazy" decoding="async" /></div><span>Vite</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.15s"><div class="tc-logo fastapi-brand"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI icon" loading="lazy" decoding="async" /></div><span>FastAPI</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.2s"><div class="tc-logo mongodb-brand"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB icon" loading="lazy" decoding="async" /></div><span>MongoDB</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.25s"><div class="tc-logo kafka-brand"><img src="https://cdn.simpleicons.org/apachekafka/231F20" alt="Kafka icon" loading="lazy" decoding="async" /></div><span>Kafka</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.3s"><div class="tc-logo pytorch-brand"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch icon" loading="lazy" decoding="async" /></div><span>PyTorch</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.35s"><div class="tc-logo socketio-brand"><img src="https://cdn.simpleicons.org/socketdotio/010101" alt="Socket.IO icon" loading="lazy" decoding="async" /></div><span>Socket.IO</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.4s"><div class="tc-logo transformers-brand"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Transformers icon" loading="lazy" decoding="async" /></div><span>Transformers</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.45s"><div class="tc-logo sklearn-brand"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-learn icon" loading="lazy" decoding="async" /></div><span>Scikit-learn</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.55s"><div class="tc-logo docker-brand"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker icon" loading="lazy" decoding="async" /></div><span>Docker</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.6s"><div class="tc-logo jwt-brand"><img src="https://cdn.simpleicons.org/jsonwebtokens/000000" alt="JWT icon" loading="lazy" decoding="async" /></div><span>JWT</span></div>
+            <div class="tech-card" data-reveal style="--delay:0.65s"><div class="tc-logo postgresql-brand"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL icon" loading="lazy" decoding="async" /></div><span>PostgreSQL</span></div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section id="milestones" class="main-sections milestones">
+    <!-- MILESTONES -->
+    <section id="milestones" class="main-sections milestones-section">
       <div class="container">
-        <h5 class="section-headings">Milestones</h5>
-        <h2>Timeline in Brief</h2>
-        <ul class="timeline">
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">July 2025</p>
-              <h3>Topic Assessment</h3>
-              <p>Defines the project topic, problem, solution, objectives, novelty, and supervisor details.</p>
-              <p><strong>Marks Allocated :</strong> Initial approval</p>
-            </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">To be updated</p>
+        <div class="section-label light">Milestones</div>
+        <h2 class="section-title light">Timeline in Brief</h2>
+        <div class="section-divider light"></div>
+        <div class="timeline-modern">
+          <article class="tm-item" data-reveal style="--delay:0s">
+            <span class="tm-node" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">March 2021</span>
               <h3>Project Proposal</h3>
-              <p>A project proposal presents the research scope, methodology, and expected outcome.</p>
-              <p><strong>Marks Allocated :</strong> 6%</p>
+              <p>A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 6</p>
+              <div class="tm-progress tm-progress--label-only"><span style="--p:6"><em>6%</em></span></div>
             </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">To be updated</p>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.04s">
+            <span class="tm-node tm-node-accent" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">June 2021</span>
               <h3>Progress Presentation I</h3>
-              <p>Reviews the first implementation status and reveals design or requirement gaps.</p>
-              <p><strong>Marks Allocated :</strong> 6%</p>
+              <p>Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 6</p>
+              <div class="tm-progress tm-progress--with-fill tm-progress--with-fill-6"><span style="--p:6"><em>6%</em></span></div>
             </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">To be updated</p>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.08s">
+            <span class="tm-node" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">July 2021</span>
               <h3>Research Paper</h3>
-              <p>Describes the research contribution, related work, methodology, and evaluation.</p>
-              <p><strong>Marks Allocated :</strong> 10%</p>
+              <p>Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 10</p>
+              <div class="tm-progress tm-progress--with-fill-10"><span style="--p:10"><em>10%</em></span></div>
             </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">To be updated</p>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.12s">
+            <span class="tm-node" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">September 2021</span>
               <h3>Progress Presentation II</h3>
-              <p>Demonstrates advanced implementation status and integrated system progress.</p>
-              <p><strong>Marks Allocated :</strong> 18%</p>
+              <p>Progress Presentation II reviews the 90% completion status demonstration of the project. Along with a Poster presentation which describes the project as a whole.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 18</p>
+              <div class="tm-progress tm-progress--with-fill-18"><span style="--p:18"><em>18%</em></span></div>
             </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">To be updated</p>
-              <h3>Final Presentation &amp; Viva</h3>
-              <p>Final demonstration and individual viva to assess complete project contribution.</p>
-              <p><strong>Marks Allocated :</strong> 20%</p>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.16s">
+            <span class="tm-node tm-node-accent" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">October 2021</span>
+              <h3>Website Assessment</h3>
+              <p>The Website helps to promote our research project and reveals all details related to the project.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 2</p>
+              <div class="tm-progress tm-progress--with-fill-2"><span style="--p:2"><em>2%</em></span></div>
             </div>
-          </li>
-        </ul>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.2s">
+            <span class="tm-node" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">November 2021</span>
+              <h3>Logbook</h3>
+              <p>Status of the project is validated through the Logbook. This also includes, Status documents 1 & 2.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 3</p>
+              <div class="tm-progress tm-progress--with-fill-3"><span style="--p:3"><em>3%</em></span></div>
+            </div>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.24s">
+            <span class="tm-node" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">November 2021</span>
+              <h3>Final Report</h3>
+              <p>Final Report evaluates the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also Final report.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 19</p>
+              <div class="tm-progress tm-progress--with-fill-19"><span style="--p:19"><em>19%</em></span></div>
+            </div>
+          </article>
+          <article class="tm-item" data-reveal style="--delay:0.28s">
+            <span class="tm-node" aria-hidden="true"></span>
+            <div class="tm-content">
+              <span class="tm-date">November 2021</span>
+              <h3>Final Presentation & Viva</h3>
+              <p>Viva is held individually to assess each members contribution to the project.</p>
+              <p class="tm-marks"><strong>Marks Allocated :</strong> 20</p>
+              <div class="tm-progress tm-progress--with-fill-final"><span style="--p:10"><em>10%</em></span></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="downloads" class="main-sections downloads">
+    <!-- DOWNLOADS -->
+    <section id="downloads" class="main-sections downloads-section">
       <div class="container">
-        <h5 class="section-headings">Downloads</h5>
-        <div class="sub-section">
-          <h2>Documents</h2>
-          <p>Please find all documents related to this project below.</p>
-          <div class="doc-grid" role="list">
-            <div class="doc-card doc-card--pdf" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon is-pdf" aria-hidden="true">PDF</div>
-                  <h5>Topic Assessment</h5>
-                </div>
-                <p>Submitted on 2025/07</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
+        <div class="section-label">Downloads</div>
+        <h2 class="section-title">Documents</h2>
+        <div class="section-divider"></div>
+        <p class="section-intro">Please find all documents related to this project below.</p>
+        <div class="doc-grid">
+          <div class="doc-card doc-card--ready" data-reveal style="--delay:0s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Topic Assessment</h5></div>
+            <p>Submitted on 2025/07</p>
+            <div class="dc-footer"><span class="dc-scope">Group</span><a href="assets/IT4010-TAF-2025-July-Emotions-predictor.pdf" class="dc-dl" download>Download ↓</a></div>
+          </div>
+          <div class="doc-card" data-reveal style="--delay:0.05s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Project Charter</h5></div>
+            <p>Yet to be submitted</p>
+            <div class="dc-footer"><span class="dc-scope">Group</span><a href="#" class="dc-dl">Download ↓</a></div>
+          </div>
+          <div class="doc-card doc-card--ready" data-reveal style="--delay:0.1s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Project Proposal</h5></div>
+            <p>Available now (4 individual component proposals)</p>
+            <div class="dc-footer dc-links-list">
+              <div class="dc-link-row"><span class="dc-scope">IT22602732</span><a href="assets/Project-Proposal-IT22602732.pdf" class="dc-dl" download>Download ↓</a></div>
+              <div class="dc-link-row"><span class="dc-scope">IT22115348</span><a href="assets/Project-Proposal-IT22115348.pdf" class="dc-dl" download>Download ↓</a></div>
+              <div class="dc-link-row"><span class="dc-scope">IT22126092</span><a href="assets/Project-Proposal-IT22126092.pdf" class="dc-dl" download>Download ↓</a></div>
+              <div class="dc-link-row"><span class="dc-scope">IT22136688</span><a href="assets/Project-Proposal-IT22136688.pdf" class="dc-dl" download>Download ↓</a></div>
             </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Project Charter</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Project Proposal</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Individual</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Status Document I</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Individual</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Status Document II</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Individual</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Research Paper</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Final Report</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                  <li><span>Individual</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon" aria-hidden="true">PDF</div>
-                  <h5>Poster</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
+          </div>
+          <div class="doc-card" data-reveal style="--delay:0.15s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Status Document I</h5></div>
+            <p>Yet to be submitted</p>
+            <div class="dc-footer"><span class="dc-scope">Individual</span><a href="#" class="dc-dl">Download ↓</a></div>
+          </div>
+          <div class="doc-card" data-reveal style="--delay:0.2s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Status Document II</h5></div>
+            <p>Yet to be submitted</p>
+            <div class="dc-footer"><span class="dc-scope">Individual</span><a href="#" class="dc-dl">Download ↓</a></div>
+          </div>
+          <div class="doc-card" data-reveal style="--delay:0.25s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Research Paper</h5></div>
+            <p>Yet to be submitted</p>
+            <div class="dc-footer"><span class="dc-scope">Group</span><a href="#" class="dc-dl">Download ↓</a></div>
+          </div>
+          <div class="doc-card" data-reveal style="--delay:0.3s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Final Report</h5></div>
+            <p>Yet to be submitted</p>
+            <div class="dc-footer dc-double"><span class="dc-scope">Group</span><a href="#" class="dc-dl">Download ↓</a><span class="dc-scope">Individual</span><a href="#" class="dc-dl">Download ↓</a></div>
+          </div>
+          <div class="doc-card" data-reveal style="--delay:0.35s">
+            <div class="dc-top"><span class="dc-type pdf">PDF</span><h5>Poster</h5></div>
+            <p>Yet to be submitted</p>
+            <div class="dc-footer"><span class="dc-scope">Group</span><a href="#" class="dc-dl">Download ↓</a></div>
           </div>
         </div>
 
         <div id="presentations" class="sub-section">
-          <h2>Presentations</h2>
-          <p>Please find all presentations related this project below.</p>
-          <div class="doc-grid" role="list">
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon is-ppt" aria-hidden="true">PPT</div>
-                  <h5>Project Proposal</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon is-ppt" aria-hidden="true">PPT</div>
-                  <h5>Progress Presentation I</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon is-ppt" aria-hidden="true">PPT</div>
-                  <h5>Progress Presentation II</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="doc-card" role="listitem">
-              <div class="doc-card__body">
-                <div class="doc-card__row">
-                  <div class="file-icon is-ppt" aria-hidden="true">PPT</div>
-                  <h5>Final Presentation</h5>
-                </div>
-                <p>Yet to be submitted, link will be updated soon.</p>
-              </div>
-              <div class="doc-card__footer">
-                <ul class="doc-links">
-                  <li><span>Group</span><a href="#">Download</a></li>
-                </ul>
-              </div>
-            </div>
+          <h2 class="section-title">Presentations</h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">Please find all presentations related to this project below.</p>
+          <div class="doc-grid">
+            <div class="doc-card doc-card--ready" data-reveal style="--delay:0s"><div class="dc-top"><span class="dc-type ppt">PPT</span><h5>Project Proposal</h5></div><p>Available now</p><div class="dc-footer"><span class="dc-scope">Group</span><a href="assets/Project-Proposal-Presentation.pptx" class="dc-dl" download>Download ↓</a></div></div>
+            <div class="doc-card doc-card--ready" data-reveal style="--delay:0.05s"><div class="dc-top"><span class="dc-type ppt">PPT</span><h5>Progress Presentation I</h5></div><p>Available now</p><div class="dc-footer"><span class="dc-scope">Group</span><a href="assets/PP1-Presentation.pptx" class="dc-dl" download>Download ↓</a></div></div>
+            <div class="doc-card doc-card--ready" data-reveal style="--delay:0.1s"><div class="dc-top"><span class="dc-type ppt">PPT</span><h5>Progress Presentation II</h5></div><p>Available now</p><div class="dc-footer"><span class="dc-scope">Group</span><a href="assets/PP2-Presentation.pptx" class="dc-dl" download>Download ↓</a></div></div>
+            <div class="doc-card" data-reveal style="--delay:0.15s"><div class="dc-top"><span class="dc-type ppt">PPT</span><h5>Final Presentation</h5></div><p>Yet to be submitted</p><div class="dc-footer"><span class="dc-scope">Group</span><a href="#" class="dc-dl">Download ↓</a></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="main-sections">
+    <!-- ABOUT -->
+    <section id="about" class="main-sections about-section">
       <div class="container">
-        <h5 class="section-headings">About Us</h5>
-        <h2>Meet Our Team !</h2>
-        <div class="about-grid">
-          <div class="card about-us-card"><div class="about-us-image"></div><h5>Ms. Ishara Weerathunga</h5><p>Supervisor</p><p>Sri Lanka Institute of Information Technology</p><p><strong>Department</strong><br />Software Engineering</p></div>
-          <div class="card about-us-card"><div class="about-us-image"></div><h5>Ms. Hansi De Silva</h5><p>Co-Supervisor</p><p>Sri Lanka Institute of Information Technology</p><p><strong>Department</strong><br />Software Engineering</p></div>
-          <div class="card about-us-card"><div class="about-us-image"></div><h5>Fonseka A.A.T.N.</h5><p>Researcher</p><p>IT22126092</p><p><strong>Component</strong><br />Agile Emotion Monitoring</p></div>
-          <div class="card about-us-card"><div class="about-us-image"></div><h5>Amarasinghe C.N.</h5><p>Researcher</p><p>IT22115348</p><p><strong>Component</strong><br />Expertise Recommendation</p></div>
-          <div class="card about-us-card"><div class="about-us-image"></div><h5>Vithana P.I</h5><p>Researcher</p><p>IT22136688</p><p><strong>Component</strong><br />Sprint Impact Tracking</p></div>
-          <div class="card about-us-card"><div class="about-us-image"></div><h5>M.B.H. De Silva</h5><p>Researcher</p><p>IT22602732</p><p><strong>Component</strong><br />Inclusive Brainstorming</p></div>
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="section-divider"></div>
+        <div class="team-grid-supervisors">
+          <article class="member-card supervisor-member-card" data-reveal style="--delay:0s">
+            <div class="member-photo">
+              <img src="assets/ishara-weerathunga.png" alt="Ms. Ishara Weerathunga" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <h4>Ms. Ishara Weerathunga</h4>
+              <span class="member-badge">Supervisor</span>
+              <p class="member-degree"><strong>Sri Lanka Institute of Information Technology</strong></p>
+              <p><strong>Department</strong></p>
+              <p>Software Engineering</p>
+            </div>
+            <div class="member-links">
+              <a href="#">LinkedIn</a>
+              <a href="#">E-Mail</a>
+            </div>
+          </article>
+          <article class="member-card supervisor-member-card" data-reveal style="--delay:0.05s">
+            <div class="member-photo">
+              <img src="assets/hansi-de-silva.png" alt="Ms. Hansi De Silva" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <h4>Ms. Hansi De Silva</h4>
+              <span class="member-badge">Co-Supervisor</span>
+              <p class="member-degree"><strong>Sri Lanka Institute of Information Technology</strong></p>
+              <p><strong>Department</strong></p>
+              <p>Software Engineering</p>
+            </div>
+            <div class="member-links">
+              <a href="#">LinkedIn</a>
+              <a href="#">E-Mail</a>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="member-section-title">Research Team Members</h3>
+        <div class="member-grid">
+          <article class="member-card" data-reveal style="--delay:0.1s">
+            <div class="member-photo">
+              <img src="assets/fonseka-aatn.png" alt="Fonseka A.A.T.N." loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <h4>Fonseka A.A.T.N.</h4>
+              <span class="member-badge">Group Member</span>
+              <p class="member-degree"><strong>Undergraduate</strong></p>
+              <p>Sri Lanka Institute of Information Technology</p>
+              <p><strong>Department</strong></p>
+              <p>Software Engineering</p>
+              <p><strong>Module</strong></p>
+              <p>Agile Emotion Monitoring</p>
+            </div>
+            <div class="member-links">
+              <a href="#">LinkedIn</a>
+              <a href="mailto:thakshilafonseka2002@gmail.com">E-Mail</a>
+            </div>
+          </article>
+          <article class="member-card" data-reveal style="--delay:0.15s">
+            <div class="member-photo">
+              <img src="assets/amarasinghe-cn.png" alt="Amarasinghe C.N." loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <h4>Amarasinghe C.N.</h4>
+              <span class="member-badge">Group Member</span>
+              <p class="member-degree"><strong>Undergraduate</strong></p>
+              <p>Sri Lanka Institute of Information Technology</p>
+              <p><strong>Department</strong></p>
+              <p>Software Engineering</p>
+              <p><strong>Module</strong></p>
+              <p>Expertise Recommendation</p>
+            </div>
+            <div class="member-links">
+              <a href="#">LinkedIn</a>
+              <a href="#">E-Mail</a>
+            </div>
+          </article>
+          <article class="member-card" data-reveal style="--delay:0.2s">
+            <div class="member-photo">
+              <img src="assets/vithana-pi.png" alt="Vithana P.I" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <h4>Vithana P.I</h4>
+              <span class="member-badge">Group Member</span>
+              <p class="member-degree"><strong>Undergraduate</strong></p>
+              <p>Sri Lanka Institute of Information Technology</p>
+              <p><strong>Department</strong></p>
+              <p>Software Engineering</p>
+              <p><strong>Module</strong></p>
+              <p>Sprint Impact Tracking</p>
+            </div>
+            <div class="member-links">
+              <a href="https://www.linkedin.com/in/pethmi-vithana" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:pethmi9@gmail.com">E-Mail</a>
+            </div>
+          </article>
+          <article class="member-card" data-reveal style="--delay:0.25s">
+            <div class="member-photo">
+              <img src="assets/mbh-de-silva.png" alt="M.B.H. De Silva" loading="lazy" decoding="async" />
+            </div>
+            <div class="member-body">
+              <h4>M.B.H. De Silva</h4>
+              <span class="member-badge">Group Member</span>
+              <p class="member-degree"><strong>Undergraduate</strong></p>
+              <p>Sri Lanka Institute of Information Technology</p>
+              <p><strong>Department</strong></p>
+              <p>Software Engineering</p>
+              <p><strong>Module</strong></p>
+              <p>Inclusive Brainstorming</p>
+            </div>
+            <div class="member-links">
+              <a href="#">LinkedIn</a>
+              <a href="#">E-Mail</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="achievements" class="promo-banner">
-      <div class="container">
-        <h2 class="promo-banner-title">Achievements</h2>
-        <p class="promo-banner-text">
-          AgileSense AI contributes an integrated research platform that combines emotion
-          monitoring, expertise recommendation, sprint impact prediction, and inclusive
-          communication support for Agile software teams.
-        </p>
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="achievements-section">
+      <div class="ach-bg"></div>
+      <div class="container ach-inner">
+        <div class="section-label light">Achievements</div>
+        <h2 class="section-title light">Our Contribution</h2>
+        <p class="ach-text">AgileSense AI contributes an integrated research platform that combines emotion monitoring, expertise recommendation, sprint impact prediction, and inclusive communication support for Agile software teams.</p>
+        <div class="ach-modules">
+          <div class="ach-mod" data-reveal style="--delay:0s"><span class="am-icon">🧠</span><span>Emotion Monitoring</span></div>
+          <div class="ach-mod" data-reveal style="--delay:0.1s"><span class="am-icon">⭐</span><span>Expertise Recommendation</span></div>
+          <div class="ach-mod" data-reveal style="--delay:0.2s"><span class="am-icon">⚡</span><span>Sprint Prediction</span></div>
+          <div class="ach-mod" data-reveal style="--delay:0.3s"><span class="am-icon">💬</span><span>Inclusive Communication</span></div>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="main-sections">
+    <!-- CONTACT -->
+    <section id="contact" class="main-sections contact-section">
       <div class="container">
-        <h5 class="section-headings">Contact Us</h5>
-        <h2>Get in Touch</h2>
-        <div class="row">
-          <div class="col-md-6">
+        <div class="section-label">Contact Us</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="section-divider"></div>
+        <div class="contact-grid">
+          <div class="contact-form-wrap" data-reveal>
+            <h3>Send us a Message</h3>
+            <p class="form-sub">Have a question about our research? We'd love to hear from you.</p>
             <form class="contact-form">
               <p class="form-feedback" id="contact-feedback" role="status" aria-live="polite" hidden></p>
-              <label>Name<input type="text" name="name" autocomplete="name" required /></label>
-              <label>Email address<input type="email" name="email" autocomplete="email" required /></label>
-              <label>Message or Query<textarea name="message" rows="5" required></textarea></label>
-              <button type="submit">Submit</button>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" name="fname" autocomplete="given-name" required placeholder="John" />
+                </div>
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" name="lname" autocomplete="family-name" required placeholder="Doe" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" autocomplete="email" required placeholder="john@example.com" />
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="e.g. Research collaboration inquiry" />
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" rows="5" required placeholder="Tell us what's on your mind…"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message <span>→</span></button>
             </form>
           </div>
-          <div class="col-md-6 contact-details">
-            <div>
-              <h4>Contact Details</h4>
-              <p>For further queries please reach us through the AgileSense AI research team.</p>
-              <p>Hope this project helped you in some manner. Thank you!</p>
-              <p>-Team AgileSense AI</p>
+          <div class="contact-info" data-reveal>
+            <div class="ci-header">
+              <div class="ci-header-icon">💬</div>
+              <h4>Team AgileSense AI</h4>
+              <p>For queries about our research modules, collaboration requests, or project details — reach out and we'll respond as soon as possible.</p>
+              <p>Hope this project helped you in some way.</p>
+              <p class="ci-sign">— Team AgileSense AI</p>
+            </div>
+            <p class="ci-modules-title">Research Modules</p>
+            <div class="ci-modules">
+              <div class="ci-mod"><div class="ci-dot em"></div><span class="ci-mod-label">Emotion Monitoring Module</span><span class="ci-mod-arrow">›</span></div>
+              <div class="ci-mod"><div class="ci-dot ex"></div><span class="ci-mod-label">Expertise Recommendation Module</span><span class="ci-mod-arrow">›</span></div>
+              <div class="ci-mod"><div class="ci-dot sp"></div><span class="ci-mod-label">Sprint Impact Module</span><span class="ci-mod-arrow">›</span></div>
+              <div class="ci-mod"><div class="ci-dot br"></div><span class="ci-mod-label">Inclusive Brainstorming Module</span><span class="ci-mod-arrow">›</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     </main>
 
     <footer class="site-footer">
-      <div class="container">AgileSense AI | IT4010 Research Project</div>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          AgileSense AI
+        </div>
+        <p>IT4010 Research Project · Sri Lanka Institute of Information Technology · 2025</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      // Custom cursor
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; });
+      (function animRing() { rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12; ring.style.transform = `translate(${rx}px,${ry}px)`; requestAnimationFrame(animRing); })();
+      document.querySelectorAll('a,button,.gap-card,.team-card,.tech-card').forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('ring-hover'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('ring-hover'));
+      });
+
+      // Hero particles
+      const hp = document.getElementById('heroParticles');
+      for (let i = 0; i < 60; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${1+Math.random()*3}px;height:${1+Math.random()*3}px;animation-delay:${Math.random()*8}s;animation-duration:${4+Math.random()*6}s;opacity:${0.1+Math.random()*0.5}`;
+        hp.appendChild(p);
+      }
+
+      // Scroll reveals
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }});
+      }, { threshold: 0.1 });
+      document.querySelectorAll('[data-reveal]').forEach(el => { io.observe(el); });
+
+      // Animated counter for hero stats
+      function animCount(el, target, suffix='') {
+        let c = 0; const step = target / 40;
+        const t = setInterval(() => {
+          c = Math.min(c + step, target);
+          el.textContent = Math.round(c) + suffix;
+          if (c >= target) clearInterval(t);
+        }, 40);
+      }
+      setTimeout(() => {
+        document.querySelectorAll('.stat-num').forEach(el => {
+          const val = parseInt(el.textContent);
+          if (!isNaN(val)) animCount(el, val);
+        });
+      }, 600);
+
+    </script>
   </body>
 </html>
